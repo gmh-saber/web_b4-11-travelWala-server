@@ -120,7 +120,7 @@ async function run() {
       console.log("added user", result);
       res.json(result);
     });
-    // Delete User Services
+    // Delete User Services https://vast-earth-49506.herokuapp.com
     app.delete("/usersServices/:id", async (req, res) => {
       const id = req.params.id;
       const query = { _id: ObjectId(id) };
@@ -155,7 +155,7 @@ async function run() {
 run().catch(console.dir);
 
 app.get("/", (req, res) => {
-  res.send("All Are ");
+  res.send("All Are set ");
 });
 
 app.listen(port, () => {
